@@ -18,5 +18,5 @@ from django.contrib import admin
 from app.views import DocumentViews
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/document/$', DocumentViews.as_view())
+    url(r'^api/document/(?P<pk>\d+)/$', DocumentViews.as_view())
 ]
